@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="GhoSter_AccountShield::accountshield_lockout" title="Account Shield" module="GhoSter_AccountShield" sortOrder="150" resource="GhoSter_AccountShield::accountshield_lockout"/>
+		<add id="GhoSter_AccountShield::config" title="Configuration" module="GhoSter_AccountShield" parent="GhoSter_AccountShield::accountshield_lockout" sortOrder="10" action="adminhtml/system_config/edit/section/accountshield" resource="GhoSter_AccountShield::config"/>
+		<add id="GhoSter_AccountShield::lockout" action="accountshield/lockout/index"  module="GhoSter_AccountShield" parent="GhoSter_AccountShield::accountshield_lockout" resource="Magento_Backend::content" sortOrder="9999" title="Manager Lockout"/>
+	</menu>
+</config>

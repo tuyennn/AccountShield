@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="ghoster" sortOrder="999" translate="label">
+			<label>GhoSter Inc</label>
+		</tab>
+		<section id="accountshield" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Account Shield</label>
+			<tab>ghoster</tab>
+			<resource>GhoSter_AccountShield::config</resource>
+			<group id="account" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Account Lockout</label>
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="max_limit" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Threshold</label>
+					<comment>Number of consecutive failed signin attempts. (Default is 3)</comment>
+				</field>
+				<field id="interval" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+					<label>Duration</label>
+					<comment>How long an account will remain as locked out. Specity in Seconds (Default is 900 Seconds)</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

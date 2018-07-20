@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch_customer_account_loginPost">
+        <observer instance="GhoSter\AccountShield\Observer\Lock" name="GhoSter_AccountShield::lock_customer"/>
+    </event>
+    <event name="customer_login">
+        <observer instance="GhoSter\AccountShield\Observer\Release" name="GhoSter_AccountShield::unlock_customer"/>
+    </event>
+</config>

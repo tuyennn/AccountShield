@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="GhoSter_AccountShield::Lockout" sortOrder="10" title="Lockout">
+					<resource id="GhoSter_AccountShield::Lockout_save" sortOrder="10" title="Save Lockout"/>
+					<resource id="GhoSter_AccountShield::Lockout_delete" sortOrder="20" title="Delete Lockout"/>
+					<resource id="GhoSter_AccountShield::Lockout_update" sortOrder="30" title="Update Lockout"/>
+					<resource id="GhoSter_AccountShield::Lockout_view" sortOrder="40" title="View Lockout"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

@@ -1,0 +1,21 @@
+{
+    "name": "ghoster/module-accountshield",
+    "description": "",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "email": "thinghost76@gmail.com",
+            "name": "Tuyen Nguyen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GhoSter\\AccountShield\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

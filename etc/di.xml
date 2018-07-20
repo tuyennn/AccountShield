@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="GhoSter\AccountShield\Api\LockoutRepositoryInterface" type="GhoSter\AccountShield\Model\LockoutRepository"/>
+	<preference for="GhoSter\AccountShield\Api\Data\LockoutInterface" type="GhoSter\AccountShield\Model\Lockout"/>
+	<preference for="GhoSter\AccountShield\Api\Data\LockoutSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="GhoSter\AccountShield\Model\ResourceModel\Lockout\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">ghoster_accountshield_lockout</argument>
+			<argument name="resourceModel" xsi:type="string">GhoSter\AccountShield\Model\ResourceModel\Lockout\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="ghoster_accountshield_lockout_grid_data_source" xsi:type="string">GhoSter\AccountShield\Model\ResourceModel\Lockout\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

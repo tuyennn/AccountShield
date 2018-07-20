@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="admin_user_authenticate_after">
+        <observer instance="GhoSter\AccountShield\Observer\AdminLock" name="GhoSter_AccountShield::lock_admin"/>
+    </event>
+    <event name="admin_session_user_login_success">
+        <observer instance="GhoSter\AccountShield\Observer\AdminRelease" name="GhoSter_AccountShield::unlock_admin"/>
+    </event>
+</config>
