@@ -1,6 +1,6 @@
 {
     "name": "ghoster/accountshield",
-    "description": "",
+    "description": "Implements the user authentication security methods such Account Lockout, Password Expiry etc outside Default Magento 2 protection engine.",
     "license": "GPL-3.0",
     "authors": [
         {
